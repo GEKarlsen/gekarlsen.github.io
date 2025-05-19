@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="pagesstyle.css">
+    <title>GEK_P_AboutMe</title>
+</head>
+<body>
+    <div class="layout">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="bwu.html">
+                        <span>Web Development</span>
+                        <p>NTNU 2022-2025</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="gdhk.html">
+                        <span>Game Design</span>
+                        <p>HK 2018-2021</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="skills.html">
+                        <span>Technologies</span>
+                        <p>Skillset</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutme.html">
+                        <span>About Me</span>
+                        <p>More than design</p>
+                    </a>
+                </li>
+                <li> <a href="/index.html">Landing Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="project_container2"> 
+                <img src="/images/me_image.png">  
+                <div class="text_container">
+                    <h1>Well hi there! Thanks for rolling by!</h1>
+                    <h3>My name is Guro E. Karlsen! And this is my Portfolio page, hope you've had 
+                        a change to look around 😗
+                    </h3>
+                    <p>A little bit more about me other than my academics, haha. I like a lot
+                        of other things as well! I change my hair about every 2 years, mostly dress in black and really like TTRPGs like Vaesen and Dungeons and Dragons (
+                            I own around 357 individual dice... don't worry about it), archery, sewing, skulpting and drawing!
+                            I enjoy being creative in other words, and no, one can not have to many hobbies✨
+                    </p>
+            <div class="icon_text_box">
+                <img src="/images/27_Artstation_logo_logos-512.png"> 
+                <a href="https://www.artstation.com/karlsenmakes" target="_blank">Link to Artsation</a>
+            </div>
+            <div class="icon_text_box">
+                <img src="/images/LinkedIn_logo_initials.png"> 
+                <a href="https://www.linkedin.com/in/guro-karlsen-895293173" target="_blank">Link to LinkedIn</a>
+            </div>
+            <div class="icon_text_box">
+                <img src="/images/itch-io-icon-2048x2048-i6hzclad.png"> 
+                <a href="https://karlsenmakes.itch.io/" target="_blank">Link to itch.io</a>
+            </div>
+            <div class="icon_text_box">
+                <img src="/images/x__twitter-logo_brandlogos.net_fxbde.png"> 
+                <a href="https://twitter.com/KarlsenMakes" target="_blank">Link to Twitter</a>
+            </div>
+            </div>
+            </div>
+
+            <div class="project_container">
+                <img class="re-size" src="/images/cosplayLa_image.jpg">
+                <div class="text_container">
+                    <h2>Laudna: Critical Role Campaign 3</h2>
+                    <h3>Hand made costume</h3>
+                    <p>My favourite cosplay I've made so far. The blouse took 3 months to embroidered by hand!
+                        Yes my wrists hurts after, but it was so worth it! Over all the costume took 1-2 years to complete,
+                        I am still doing small fixes or adding something to it still, always something to do! 
+                    </p>
+                </div>
+            </div>
+
+            <div class="project_container2">
+                <img class="re-size" src="/images/cosplayMar_image.jpg">
+                <div class="text_container">
+                    <h2>Marcille: Delicsous in Dungeon</h2>
+                    <h3>Hand made costume</h3>
+                    <p>A newer cosplay I'm still working on, but this one is more of a slow process. The dress itself only took about
+                        4 days in a rush, and I did the patter completely free hand, mostly because I didn't find a patter
+                        I liked in time. This wig is also super long! But I made it even longer, haha, it wasn't thick nor long enough,
+                        but now it's pretty much perfect! The next steps is to make a cloak and embroidery some details on the dress!
+                    </p>
+                </div>
+            </div>
+            <div class="project_container">
+                <img class="re-size" src="/images/artLesh_image.png">
+                <div class="text_container">
+                    <h2>Leshen: Witcher 3</h2>
+                    <h3>Marquette Skulpture</h3>
+                    <p>When I went to HK we did 4 weeks of marquette skulpting as an elective. It was so much fun!
+                        It did take 4 full weeks with 6 to 9 hour work days to complete it. So many small details
+                        and pieces to make individually. Had so much fun and I really want to make another one!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="project_container2">
+                <img src="/images/artVi_image.png">
+                <div class="text_container">
+                    <h2>Vi - Arcane</h2>
+                    <h3>Art Study</h3>
+                    <p>One of my favourite shows ever is Arcane. The art style is amazing, the animation is breath
+                        taking and the character are so amazing! When ever I get stuck with my own art progress I tend 
+                        to do something called an art study, where you try to re-create an artstyle, and I went with the style 
+                        from Arcane. It took about 17 hours o complete and I leanred so much! 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop(); // gets just the filename
+    
+        links.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active"); // in case it was previously set
+            }
+        });
+    </script>
+    
+</body>
+</html>

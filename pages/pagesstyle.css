@@ -1,0 +1,189 @@
+:root{
+    --main_content : #232e4f;
+    --background: #0a0e1a;
+    --hover_box: #404f71;
+    --outline: #c4a485;
+    --text: #c4c3ca;
+}
+
+body{
+    margin: 20px;
+    background-color: var(--background);
+}
+
+header{
+    width: 180px;
+    margin-top: 3%;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--main_content);
+    border: 3px double var(--outline);
+    height: auto;
+}
+
+h3, p{
+    color: whitesmoke;
+}
+
+h1, h2{
+    color: var(--outline);
+}
+
+.layout {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+li a {
+    display: block;
+    width: 180px;
+    color: var(--text);
+    padding: 15px 15px;
+    text-decoration: none;
+    /*background-color: rgb(50, 37, 50);*/
+    /*margin-bottom: 15px;*/
+    height: auto;
+    box-sizing: border-box;
+}
+
+li a p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: var(--outline);
+}
+
+li a.active {
+    background-color: var(--main_content);
+    /*box-shadow: inset 0 0 10px blue;*/
+    border: 3px double var(--outline);
+    border-right: 0;
+    color: whitesmoke;
+}
+
+li a:hover:not(.active) {
+    background-color: var(--hover_box);
+    color: white;
+    box-shadow: inset 0 0 10px #e8dfb1;
+    border: 3px double var(--outline);
+    border-right: 0;
+}
+
+.project_container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; /* vertically align items */
+    gap: 20px; /* space between image and text */
+    margin-bottom: 10px;
+}
+
+.project_container2{
+    display: flex;
+    align-items: center; /* vertically align items */
+    gap: 20px; /* space between image and text */
+    margin-bottom: 10px;
+}
+
+.project_container img, .project_container2 img {
+    width: 50%; /* or any size you want */
+    height: auto;
+}
+
+.project_container h2, h3, p, .project_container2 h2, h3, p {
+    font-size: 1,3rem;
+}
+
+.text_container{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.text_container h2, h3 {
+    margin: 0 0 10px;
+}
+
+.text_container p {
+    margin: 0;
+    color: whitesmoke;
+}
+
+.image-row {
+    display: flex;
+    justify-content: left; /* or space-around / center */
+    gap: 15px; /* space between images */
+    margin-bottom: 30px;
+}
+
+.image-row img {
+    width: 15%; /* or adjust as needed */
+    height: auto;
+    object-fit: cover;
+}
+
+.icon_text_box img{
+    width: 5%;
+}
+
+.icon_text_box a{
+    color: var(--outline);
+}
+
+.icon_text_box a:hover{
+    color: var(--text);
+}
+
+.re-size{
+    width: 30%;
+}
+
+.skill_style{
+    display: flex;
+    justify-content: left; /* or space-around / center */
+    gap: 15px; /* space between images */
+    margin-bottom: 30px;
+}
+
+.skill_boxes{
+    width: 150px;
+    height: auto;
+    background-color: var(--background);
+    border: 3px double var(--outline);
+    padding: 10px;
+}
+
+.skill_boxes p{
+    color: var(--text);
+}
+
+.skill_style img{
+    display: flex;
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+.skill_style h3{
+    text-align: center;
+    color: var(--text);
+}
+
+.icon_text_box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 600px) {
+    .project_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

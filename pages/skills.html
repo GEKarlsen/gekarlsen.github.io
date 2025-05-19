@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="pagesstyle.css">
+    <title>Skills</title>
+</head>
+<body>
+    <div class="layout">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="bwu.html">
+                        <span>Web Development</span>
+                        <p>NTNU 2022-2025</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="gdhk.html">
+                        <span>Game Design</span>
+                        <p>HK 2018-2021</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="skills.html">
+                        <span>Technologies</span>
+                        <p>Skillset</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutme.html">
+                        <span>About Me</span>
+                        <p>More than design</p>
+                    </a>
+                </li>
+                <li> <a href="/index.html">Landing Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Technologies</h1>
+            <h3>These are my skillset of what I have  learned when studying to become a Game Designer and Web Developer.</h3>
+
+            <div class="skill_style">
+                <div class="skill_boxes">
+                    <h3>Design Tools</h3>
+                    <div class="icon_text_box">
+                        <img src="/images/adobe-photoshop-logo-0.png"> 
+                        <p>Adope Photoshop</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/Adobe_Illustrator_CC_icon.svg.png">
+                        <p>Adobe Illustrator</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/Adobe_InDesign_CC_icon.svg.png">
+                        <p>Adobe InDesign</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/Adobe_Premiere_Pro_CC_icon.svg.png">
+                        <p>Adobe Premier Pro</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/Figma-logo.png">
+                        <p>Figma</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/Procreate-Symbol.png">
+                        <p>Procreate</p>
+                    </div>
+                </div>
+                <div class="skill_boxes">
+                    <h3>Languages</h3>
+                    <div class="icon_text_box">
+                        <img src="/images/Csharp_Logo.png"> 
+                        <p>C#</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/ue-logotype-2023-vertical-white-1686x2048-bbfded26daa7.png">
+                        <p>Unreal Engine 4</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/HTML5_logo_and_wordmark.svg.png">
+                        <p>html</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/png-javascript-badge-picture-8.png">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="skill_boxes">
+                    <h3>Frontend</h3>
+                    <div class="icon_text_box">
+                        <img src="/images/CSS3_logo_and_wordmark.svg.png"> 
+                        <p>CSS</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/React.png">
+                        <p>React</p>
+                    </div>
+                </div>
+                <div class="skill_boxes">
+                    <h3>Backend</h3>
+                    <div class="icon_text_box">
+                        <img src="/images/node-js-icon-1817x2048-g8tzf91e.png"> 
+                        <p>Node.js</p>
+                    </div>
+                    <div class="icon_text_box">
+                        <img src="/images/express-js.png">
+                        <p>Express.js</p>
+                    </div>
+                </div>
+                <div class="skill_boxes">
+                    <h3>Database</h3>
+                    <div class="icon_text_box">
+                        <img src="/images/Mysql_logo.png"> 
+                        <p>MySQL</p>
+                    </div>
+                </div>
+                <div class="skill_boxes">
+                    <h3>Version Control</h3>
+                    <div class="icon_text_box">
+                        <img src="/images/GitHub-Logo.png"> 
+                        <p>GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop(); // gets just the filename
+    
+        links.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active"); // in case it was previously set
+            }
+        });
+    </script>
+</body>
+</html>

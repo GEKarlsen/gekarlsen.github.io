@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="pagesstyle.css">
+    <title>GEK_P_WebDev</title>
+</head>
+<body>
+    <div class="layout">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="bwu.html">
+                        <span>Web Development</span>
+                        <p>NTNU 2022-2025</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="gdhk.html">
+                        <span>Game Design</span>
+                        <p>HK 2018-2021</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="skills.html">
+                        <span>Technologies</span>
+                        <p>Skillset</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutme.html">
+                        <span>About Me</span>
+                        <p>More than design</p>
+                    </a>
+                </li>
+                <li> <a href="/index.html">Landing Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+                <!--<ul>
+                    <li><a id="ba_project">BA</a></li>
+                    <li><a id="p2_project">P2</a></li>
+                    <li><a id="p3_project">P3</a></li>
+                </ul> -->
+                
+            <h1>Web Development</h1>
+            <h3>Studying Web Development at NTNU Gjøvik from 2022 to 2025</h3>
+            <p>I've always enjoyed designing and figuring out how things works. When I first tried Web 
+                designing in 2016 it open up a whole new world. It was so much fun! My first ever web page 
+                was not great, but I am still very proud of it, really wish I still had it. So studying Web Development felt right!
+                I mostly enjoy the Front-end part of development. 
+            </p>
+
+            <div class="project_container">
+                <img src="/images/Ba_image.jpg">
+                <div class="text_container">
+                    <h2>HousemateHQ</h2>
+                    <h3>Bachelor Project with SiT</h3>
+                    <p>Housemate HQ is my and my project partner Solveig Ranøien Engen Bachelor project that aims to promote sneaky socialization within student collectives. 
+                        We have created an application that initiates socialization and supports collaboration within Studentskipnader's collectives. 
+                        The app aims to establish initial contact with those you have moved in with. By creating a profile, you will be able to personalize it, 
+                        get friend suggestions and join/add activities you can do together. By subtly taking the initiative, the app will contribute to unity 
+                        and social activities together without the pressure of social anxiety.</p>
+                    <div class="icon_text_box">
+                        <img src="/images/GitHub-Logo.png"> 
+                        <a href="https://github.com/Geka19/HousemateHQ_BA" target="_blank">Link to GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-row">
+                <img src="/images/Ba_image2.jpg">
+                <img src="/images/Ba_image3.jpg">
+                <img src="/images/Ba_image4.jpg">
+            </div>
+            
+            <div class="project_container">
+                <img src="/images/DicePage_image.jpg">
+                <div class="text_container">
+                    <h2>Accessibility Web Page</h2>
+                    <h3>Accessibility, usability and ethics</h3>
+                    <p>For the course Accessibility, usability and ethics(IDG2012) I created a website that is ARIA (Accessible Rich Internet Applications). 
+                        It has TAB navigation, detailed descriptions/image text, screen reader options and follows the colors/font sizes/audio/video 
+                        rules from WCAG 2.1. The yellow boxes are navigation highlights with TAB in use, it highlights where you are on the page and uses a screen 
+                        reader to read any text.</p>
+                </div>
+            </div>
+            <div class="project_container2">
+                <img src="/images/Race_image.jpg">
+                <div class="text_container">
+                    <h2>Fast Horse Race</h2>
+                    <h3>Webcomponents</h3>
+                    <p>We were going to learn about Web Components and how to use them. Made a racing game where you have to press a button to make the
+                    “horse” move forward. The design is based on my D&D home game where the “Horses” are some of the characters from the game.
+                    Was a lot of fun working on this project and I am happy with the result!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop(); // gets just the filename
+    
+        links.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active"); // in case it was previously set
+            }
+        });
+    </script>
+    
+</body>
+</html>

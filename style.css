@@ -1,0 +1,49 @@
+:root{
+    --background: #0a0e1a;
+    --hover_box: #404f71;
+    --outline: #c4a485;
+    --text: #c4c3ca;
+}
+
+body{
+    margin: 0;
+    background-image: url("/images/HighresScreenshot00006.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background);
+}
+
+header{
+    margin-left: 20%;
+}
+
+.titleBox, h1, h2{
+    text-align: center;
+    color: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: var(--background);
+    opacity: 90%;
+    position: fixed;
+    height: 100%;
+    outline: 5px;
+}
+
+li a {
+    display: block;
+    color: var(--text);
+    padding: 20px 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+li a:hover{
+    background-color: var(--hover_box);
+    color: white;
+    border: 3px double var(--outline);
+}

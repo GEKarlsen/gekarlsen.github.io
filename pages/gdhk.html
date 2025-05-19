@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="pagesstyle.css">
+    <title>GEK_P_GameDesign</title>
+</head>
+<body>
+    <div class="layout">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="bwu.html">
+                        <span>Web Development</span>
+                        <p>NTNU 2022-2025</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="gdhk.html">
+                        <span>Game Design</span>
+                        <p>HK 2018-2021</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="skills.html">
+                        <span>Technologies</span>
+                        <p>Skillset</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutme.html">
+                        <span>About Me</span>
+                        <p>More than design</p>
+                    </a>
+                </li>
+                <li> <a href="/index.html">Landing Page</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <div class="content">
+                    <!--<ul>
+                        <li><a id="ba_project">BA</a></li>
+                        <li><a id="p2_project">P2</a></li>
+                        <li><a id="p3_project">P3</a></li>
+                    </ul> -->
+                <h1>Game Design</h1>
+                <h3>From 2018 to 2021 I studied by Høyskolen Kristiania in Oslo to become a Game Designer.</h3>
+                <p>Videogames have always been a great passion of mine, I love running around seeing the enviorments, 
+                    fighting off monsters or sneaking around undetected. I developed a passion for enviorment design 
+                    which is designing how each level should look. So yeah, basically placing where each rock, grass, house or
+                    tree would be. 
+                </p>
+    
+                <div class="project_container">
+                    <img src="/images/Bagd_image.jpg">
+                    <div class="text_container">
+                        <h2>Den arktiske alven - en magik portal</h2>
+                        <h3>Bachelor Project Gamedesign 2022</h3>
+                        <p>with Kulturtanken - Den Kulturelle Skolesekken Norge and Elin Kåven, through Høyskolen Kristiania.</p>
+                        <p>AR(Augmented Reality) Prototype. I was the group leader, main Gamedesigner and UI designer. Worked with
+                            2 3D designers who made all the 3D assets. Program used was Unity. 
+                        </p>
+                        <div class="icon_text_box">
+                            <img src="/images/27_Artstation_logo_logos-512.png"> 
+                            <a href="https://www.artstation.com/artwork/28m5AY" target="_blank">Link to Artsation</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image-row">
+                    <img src="/images/Bagd_image2.jpg">
+                    <img src="/images/Bagd_image3.jpg">
+                    <img src="/images/Bagd_image4.jpg">
+                    <img src="">
+                </div>
+                
+                <div class="project_container">
+                    <img src="/images/witchre_image.jpg">
+                    <div class="text_container">
+                        <h2>Game Level Recreation</h2>
+                        <h3>Witcher 3 - Blood and Wine</h3>
+                        <p>In Level Design course we recreated a level off choice. I recreated my favourite
+                            level from Witcher 3 - Blood and Wine. I used Unreal Engine 4 for this assigment. 
+                        </p>
+                        <div class="icon_text_box">
+                            <img src="/images/27_Artstation_logo_logos-512.png"> 
+                            <a href="https://www.artstation.com/artwork/mD9mVy" target="_blank">Link to Artsation</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image-row">
+                    <img src="/images/witchre_image2.jpg">
+                    <img src="/images/witchre_image3.jpg">
+                    <img src="/images/witchre_image4.jpg">
+                    <img src="/images/witchre_image5.jpg">
+                </div>
+    
+                <div class="project_container">
+                    <img src="/images/Plypus_image.jpg">
+                    <div class="text_container">
+                        <h2>OctoWhip</h2>
+                        <h3>2D game for PC and Android</h3>
+                        <p>For this project I did all the character art and assets. Team of 4 people, made in Unity</p>
+                        <div class="icon_text_box">
+                            <img src="/images/27_Artstation_logo_logos-512.png"> 
+                            <a href="https://www.artstation.com/artwork/Nx3Q11" target="_blank">Link to Artsation</a>
+                        </div>
+                        <div class="icon_text_box">
+                            <img src="/images/itch-io-icon-2048x2048-i6hzclad.png"> 
+                            <a href="https://swarmino.itch.io/octowhip" target="_blank">Link to itch.io page</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image-row">
+                    <img src="/images/plypus_image2.jpg">
+                    <img src="/images/plypus_image3.jpg">
+                    <img src="/images/plypus_image4.jpg">
+                    <img src="/images/plypus_image5.jpg">
+                </div>
+    
+            </div>
+        </main>
+    </div>
+    <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop(); // gets just the filename
+    
+        links.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active"); // in case it was previously set
+            }
+        });
+    </script>
+    
+</body>
+</html>
