@@ -105,18 +105,27 @@
 
     <script>
         const links = document.querySelectorAll("nav a");
-        const currentPage = window.location.pathname.split("/").pop(); // gets just the filename
+        const currentPage = window.location.pathname.split("/").pop();
     
         links.forEach(link => {
             const linkPage = link.getAttribute("href");
             if (linkPage === currentPage) {
                 link.classList.add("active");
             } else {
-                link.classList.remove("active"); // in case it was previously set
+                link.classList.remove("active"); 
             }
         });
 
-        // Your dark mode toggle code:
+        const settingsToggle = document.getElementById('settings-toggle');
+        const settingsItem = settingsToggle.parentElement;
+
+        settingsToggle.addEventListener('click', (e) => {
+            e.preventDefault(); 
+
+            settingsItem.classList.toggle('open');
+        });
+
+        // light mode toggle
         const themeToggle = document.getElementById('theme-toggle');
 
         themeToggle.addEventListener('change', () => {
@@ -141,8 +150,6 @@
             if (themeToggle) themeToggle.checked = true;
         }
         });
-
-    </script>
     </script>
     
 </body>

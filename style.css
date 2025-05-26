@@ -45,14 +45,12 @@ header {
     padding-top: 20px;
 }
 
-/* Title styles (inside sidebar) */
 .titleBox {
     text-align: center;
     color: var(--text);
     margin-bottom: 20px;
 }
 
-/* List layout */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -93,7 +91,6 @@ header {
     z-index: 100;
 }
 
-/* Instead of hover, we will toggle a class */
 .settings-item.open .submenu {
     display: block;
 }
@@ -118,37 +115,6 @@ header {
 #theme-toggle {
     cursor: pointer;
 }
-
-/* Nav layout for desktop 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 20%;
-    background-color: var(--background);
-    opacity: 90%;
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
-li a {
-    display: block;
-    color: var(--text);
-    padding: 20px 15px;
-    text-decoration: none;
-    text-align: center;
-}
-
-li a:hover {
-    background-color: var(--hover_box);
-    color: white;
-    border: 3px double var(--outline);
-}*/
 
 @media (max-width: 768px) {
     ul {

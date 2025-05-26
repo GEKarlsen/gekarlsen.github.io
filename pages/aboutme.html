@@ -131,14 +131,14 @@
     </div>
     <script>
         const links = document.querySelectorAll("nav a");
-        const currentPage = window.location.pathname.split("/").pop(); // gets just the filename
+        const currentPage = window.location.pathname.split("/").pop(); 
     
         links.forEach(link => {
             const linkPage = link.getAttribute("href");
             if (linkPage === currentPage) {
                 link.classList.add("active");
             } else {
-                link.classList.remove("active"); // in case it was previously set
+                link.classList.remove("active");
             }
         });
 
@@ -146,13 +146,12 @@
         const settingsItem = settingsToggle.parentElement;
 
         settingsToggle.addEventListener('click', (e) => {
-            e.preventDefault(); // prevent default anchor jump
+            e.preventDefault(); 
 
-            // Toggle the open class on the li to show/hide submenu
             settingsItem.classList.toggle('open');
         });
 
-        // Your dark mode toggle code:
+        // light mode toggle
         const themeToggle = document.getElementById('theme-toggle');
 
         themeToggle.addEventListener('change', () => {
