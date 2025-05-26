@@ -5,23 +5,121 @@
     --text: #c4c3ca;
 }
 
-body{
+.dark-mode {
+    --background: #566999;
+    --main_content: #2b2b2b;
+    --text: #05070e;
+    --outline: #e0e0e0;
+    --hover_box: #333;
+}
+
+body {
     margin: 0;
     background-image: url("/images/HighresScreenshot00006.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* optional: keeps it static during scroll */
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Move the sidebar inward from the left (e.g. 10% of the screen) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 20%; /* <-- This creates the "between-left-and-center" effect */
+    width: 220px;
+    height: 100vh;
     background-color: var(--background);
+    opacity: 90%;
+    outline: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
-header{
-    margin-left: 20%;
-}
-
-.titleBox, h1, h2{
+/* Title styles (inside sidebar) */
+.titleBox {
     text-align: center;
-    color: whitesmoke;
+    color: var(--text);
+    margin-bottom: 20px;
 }
 
+/* List layout */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    background-color: var(--hover_box);
+    color: white;
+    border: 3px double var(--outline);
+}
+
+
+.titleBox h1, .titleBox h2 {
+    text-align: center;
+    color: var(--text);
+    margin: 5px;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 5px 0 0 0;
+    background-color: var(--background);
+    border: 2px double var(--outline);
+    position: absolute;
+    min-width: 150px;
+    z-index: 100;
+}
+
+/* Instead of hover, we will toggle a class */
+.settings-item.open .submenu {
+    display: block;
+}
+
+.settings-item {
+    position: relative;
+}
+
+.submenu li {
+    padding: 10px 15px;
+    color: var(--text);
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submenu label {
+    cursor: pointer;
+}
+
+#theme-toggle {
+    cursor: pointer;
+}
+
+/* Nav layout for desktop 
 ul {
     list-style-type: none;
     margin: 0;
@@ -30,8 +128,12 @@ ul {
     background-color: var(--background);
     opacity: 90%;
     position: fixed;
-    height: 100%;
-    outline: 5px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 li a {
@@ -42,8 +144,36 @@ li a {
     text-align: center;
 }
 
-li a:hover{
+li a:hover {
     background-color: var(--hover_box);
     color: white;
     border: 3px double var(--outline);
+}*/
+
+@media (max-width: 768px) {
+    ul {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header {
+        margin-left: 0;
+    }
+
+    li a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .titleBox {
+        margin-bottom: 10px;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
 }

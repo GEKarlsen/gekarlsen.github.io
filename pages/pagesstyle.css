@@ -6,6 +6,14 @@
     --text: #c4c3ca;
 }
 
+.dark-mode {
+    --background: #1a1a1a;
+    --main_content: #2b2b2b;
+    --text: #f0f0f0;
+    --outline: #e0e0e0;
+    --hover_box: #333;
+}
+
 body{
     margin: 20px;
     background-color: var(--background);
@@ -22,6 +30,7 @@ main {
     background-color: var(--main_content);
     border: 3px double var(--outline);
     height: auto;
+    margin-left: 200px; /* Make space for sidebar */
 }
 
 h3, p{
@@ -34,8 +43,57 @@ h1, h2{
 
 .layout {
     display: flex;
+    flex-wrap: wrap;
 }
 
+header {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: var(--background);
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: block;
+    color: var(--text);
+    padding: 15px;
+    text-decoration: none;
+    border: 2px double transparent;
+    transition: background 0.3s, border 0.3s;
+}
+
+nav a span {
+    display: block;
+    font-weight: bold;
+}
+
+nav a p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: var(--outline);
+}
+
+nav a:hover {
+    background-color: var(--hover_box);
+    border: 2px double var(--outline);
+    color: white;
+}
+
+
+
+/*
 ul {
     list-style-type: none;
     margin: 0;
@@ -50,7 +108,7 @@ li a {
     padding: 15px 15px;
     text-decoration: none;
     /*background-color: rgb(50, 37, 50);*/
-    /*margin-bottom: 15px;*/
+    /*margin-bottom: 15px;
     height: auto;
     box-sizing: border-box;
 }
@@ -59,7 +117,7 @@ li a p {
     margin: 5px 0 0;
     font-size: 0.9em;
     color: var(--outline);
-}
+}*/
 
 li a.active {
     background-color: var(--main_content);
@@ -74,7 +132,7 @@ li a:hover:not(.active) {
     color: white;
     box-shadow: inset 0 0 10px #e8dfb1;
     border: 3px double var(--outline);
-    border-right: 0;
+    border-right: 0; 
 }
 
 .project_container{
@@ -129,15 +187,20 @@ li a:hover:not(.active) {
     object-fit: cover;
 }
 
+.socialsBox{
+    padding-top: 15px;
+}
+
 .icon_text_box img{
     width: 5%;
 }
 
-.icon_text_box a{
+.icon_text_box p, a, img{
     color: var(--outline);
+    padding-top: 15px;
 }
 
-.icon_text_box a:hover{
+.icon_text_box a:hover, p:hover{
     color: var(--text);
 }
 
@@ -181,9 +244,100 @@ li a:hover:not(.active) {
     gap: 5px;
 }
 
-@media (max-width: 600px) {
-    .project_container {
+@media (max-width: 768px) {
+    .project_container,
+    .project_container2 {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project_container img,
+    .project_container2 img {
+        width: 90%;
+    }
+
+    .text_container {
+        align-items: center;
+    }
+
+    .text_container h2, h3, p {
+        font-size: 1rem;
+    }
+
+    .image-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-row img {
+        width: 40%; /* You can go smaller if needed */
+        margin-bottom: 10px;
+    }
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-bottom: 3px double var(--outline);
+        background-color: var(--background);
+    }
+
+    nav li {
+        margin: 0;
+        flex: 1 1 45%; /* Two per row if space allows */
+        text-align: center;
+        border-right: 1px solid var(--outline);
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav a {
+        padding: 10px;
+        border: none;
+    }
+
+    nav a span {
+        display: block;
+    }
+
+    nav a p {
+        font-size: 0.8em;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .skill_style {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill_boxes {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .skill_style img {
+        width: 40%;
+    }
+
+    .icon_text_box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon_text_box img {
+        width: 20%;
     }
 }
+

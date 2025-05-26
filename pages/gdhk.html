@@ -138,6 +138,34 @@
                 link.classList.remove("active"); // in case it was previously set
             }
         });
+
+        // Your dark mode toggle code:
+        const themeToggle = document.getElementById('theme-toggle');
+
+        themeToggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) themeToggle.checked = true;
+        }
+        });
+
+    </script>
     </script>
     
 </body>
